@@ -7,12 +7,12 @@ namespace DFEitechLibrary.Models
 {
     public class Loan
     {
-        int Id { get; set; }
-        int StudentId { get; set; }
-        int BookId { get; set; }
-        DateTime LoanDate { get; set; }
-        DateTime LoanDue { get; set; }
-        Boolean Active { get; set; }
-        Decimal Accrued { get; set; }
+        public int Id { get; set; }
+        public int StudentId { get; set; }
+        public int BookId { get; set; }
+        public DateTime LoanDate { get; set; }
+        public DateTime LoanDue { get; set; }
+        public Boolean Active { get; set; }
+        public Decimal Accrued { get; set; }
     }
 }

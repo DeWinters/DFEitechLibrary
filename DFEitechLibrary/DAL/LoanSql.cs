@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DFEitechLibrary.Models;
+using MySql.Data.MySqlClient;
 
 namespace DFEitechLibrary.DAL
 {
@@ -19,62 +20,311 @@ namespace DFEitechLibrary.DAL
 
         public Loan InsertLoan(int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
         {
-            Loan loan = new Loan(); // TBC
+            Loan loan = new Loan();
+            if (studentId !=0 && bookId !=0 && loanDate !=null && loanDue !=null && active !=false && accrued !=0)
+            {
+                try
+                {
+                    cmd.CommandText = "INSERT INTO loan (student_id, book_id, loan_date, loan_due, loan_active, loan_penalty) VALUES(@STUDENT, @BOOK, @DATE, @DUE, @ACTIVE, @ACCRUED)";
+                    cmd.Parameters.AddWithValue("@STUDENT", studentId);
+                    cmd.Parameters.AddWithValue("@BOOK", bookId);
+                    cmd.Parameters.AddWithValue("@DATE", loanDate);
+                    cmd.Parameters.AddWithValue("@DUE", loanDue);
+                    cmd.Parameters.AddWithValue("@ACTIVE", active);
+                    cmd.Parameters.AddWithValue("@ACCRUED", accrued);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return loan;
         }
 
         public Loan DeleteLoan(int loanId)
         {
-            Loan loan = new Loan(); // TBC
+            Loan loan = new Loan();
+            if (loanId != 0)
+            {
+                try
+                {
+                    loan = FindLoanById(loanId);
+                    cmd.CommandText = "DELETE FROM student WHERE student_id= @ID";
+                    cmd.Parameters.AddWithValue("@ID", loanId);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return loan;
         }
 
         public Loan UpdateLoan(int loanId, int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
         {
             Loan loan = new Loan();
+            if (loanId !=0 && studentId !=0 && bookId !=0 && loanDate !=null && loanDue !=null && active !=false && accrued !=0)
+            {
+                try
+                {
+                    cmd.CommandText = "UPDATE loan SET student_id=@STUDENT, book_id=@BOOK, loan_date=@DATE, loan_due=@DUE, loan_active=@ACTIVE, loan_accrued=@ACCRUED WHERE loan_id=@LOAN";
+                    cmd.Parameters.AddWithValue("@LOAN", loanId);
+                    cmd.Parameters.AddWithValue("@STUDENT", studentId);
+                    cmd.Parameters.AddWithValue("@BOOK", bookId);
+                    cmd.Parameters.AddWithValue("@DATE", loanDate);
+                    cmd.Parameters.AddWithValue("@DUE", loanDue);
+                    cmd.Parameters.AddWithValue("@ACTIVE", active);
+                    cmd.Parameters.AddWithValue("@ACCRUED", accrued);
+                    cmd.ExecuteNonQuery();
+
+                    loan = FindLoanById(loanId);
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error report string
+                }
+            }
             return loan;
         }
 
         /************************************************************ Loan Getters **/
+        public Loan FindLoanById(int loanId)
+        {
+            Loan loan = new Loan();
+            if (loanId != 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_id=" + loanId;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
+            return loan;
+        }
+
         public List<Loan> GetLoansById(int loanId)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (loanId != 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_id=" + loanId;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoansByStudent(int studentId)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (studentId != 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE student_id=" + studentId;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoanByBookId(int bookId)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (bookId != 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE book_id=" + bookId;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoanByDate(DateTime loanDate)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (loanDate !=null)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_date=" + loanDate;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoanByDue(DateTime loanDue)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (loanDue !=null)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_due=" + loanDue;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoanByActive(Boolean active)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (active !=false)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_active=" + active;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
 
         public List<Loan> GetLoanByAccrued(Decimal accrued)
         {
-            List<Loan> matchedLoans = new List<Loan>(); // TBC
+            List<Loan> matchedLoans = new List<Loan>();
+            if (accrued != 0)
+            {
+                try
+                {
+                    cmd.CommandText = "SELECT * FROM loan WHERE loan_accrued=" + accrued;
+                    rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Loan loan = new Loan();
+                        loan.Id = rdr.GetInt32(0);
+                        loan.StudentId = rdr.GetInt32(1);
+                        loan.BookId = rdr.GetInt32(2);
+                        loan.LoanDate = rdr.GetDateTime(3);
+                        loan.LoanDue = rdr.GetDateTime(4);
+                        loan.Active = rdr.GetBoolean(5);
+                        loan.Accrued = rdr.GetDecimal(6);
+                        matchedLoans.Add(loan);
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    // lacking error export string
+                }
+            }
             return matchedLoans;
         }
     }

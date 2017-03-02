@@ -7,8 +7,8 @@ namespace DFEitechLibrary.Models
 {
     public class Student
     {
-        int Id { get; set; }
-        string NameL { get; set; }
-        string NameF { get; set; }
+        public int Id { get; set; }
+        public string NameL { get; set; }
+        public string NameF { get; set; }
     }
 }

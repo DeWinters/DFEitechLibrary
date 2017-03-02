@@ -7,9 +7,9 @@ namespace DFEitechLibrary.Models
 {
     public class BookType
     {
-        int Id { get; set; }
-        string Name { get; set; }
-        TimeSpan Duration { get; set; }
-        Decimal Penalty { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public TimeSpan Duration { get; set; }
+        public Decimal Penalty { get; set; }
     }
 }

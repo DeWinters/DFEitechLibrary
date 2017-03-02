@@ -54,39 +54,39 @@ namespace DFEitechLibrary.DAL
         }
 
         /************************************************************ Book Passers *****/
-        public Book InsertBook(string title, string authF, string authL, BookType type)
+        public Book InsertBook(string title, string authF, string authL, BookType type, TypeSql typeSql)
         {
-            return bookSql.InsertBook(title, authF, authL, type);
+            return bookSql.InsertBook(title, authF, authL, type, typeSql);
         }
 
-        public Book DeleteBook(int bookId)
+        public Book DeleteBook(int bookId, TypeSql typeSql)
         {
-            return bookSql.DeleteBook(bookId);
+            return bookSql.DeleteBook(bookId, typeSql);
         }
 
-        public Book UpdateBook(int bookId, string authF, string authL, BookType type)
+        public Book UpdateBook(int bookId, string authF, string authL, BookType type, TypeSql typeSql)
         {
-            return bookSql.UpdateBook(bookId, authF, authL, type);
+            return bookSql.UpdateBook(bookId, authF, authL, type, typeSql);
         }
 
-        public List<Book> GetBookById(int id)
+        public List<Book> GetBookById(int id, TypeSql typeSql)
         {
-            return bookSql.GetBookById(id);
+            return bookSql.GetBookById(id, typeSql);
         }
 
-        public List<Book> GetBookByName(string title)
+        public List<Book> GetBookByName(string title, TypeSql typeSql)
         {
-            return bookSql.GetBookByName(title);
+            return bookSql.GetBookByName(title, typeSql);
         }
 
-        public List<Book> GetBookByAuthF(string authF)
+        public List<Book> GetBookByAuthF(string authF, TypeSql typeSql)
         {
-            return bookSql.GetBookByAuthF(authF);
+            return bookSql.GetBookByAuthF(authF, typeSql);
         }
 
-        public List<Book> GetBookAuthL(string authL)
+        public List<Book> GetBookAuthL(string authL, TypeSql typeSql)
         {
-            return bookSql.GetBookByAuthL(authL);
+            return bookSql.GetBookByAuthL(authL, typeSql);
         }
 
         /************************************************************ Type Passers *****/
@@ -100,9 +100,9 @@ namespace DFEitechLibrary.DAL
             return typeSql.DeleteBookType(id);
         }
 
-        public BookType UpdateBookType(int id, TimeSpan duration, Decimal penalty)
+        public BookType UpdateBookType(int id, TimeSpan duration, string typeName, Decimal penalty)
         {
-            return typeSql.UpdateBookType(id, duration, penalty);
+            return typeSql.UpdateBookType(id, typeName, duration, penalty);
         }
 
         public List<BookType> GetTypeById(int id)

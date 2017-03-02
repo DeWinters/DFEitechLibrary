@@ -7,10 +7,10 @@ namespace DFEitechLibrary.Models
 {
     public class Book
     {
-        int Id { get; set; }
-        string Title { get; set; }
-        string AuthL { get; set; }
-        string AuthF { get; set; }
-        BookType TomeType { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string AuthL { get; set; }
+        public string AuthF { get; set; }
+        public BookType TomeType { get; set; }
     }
 }
