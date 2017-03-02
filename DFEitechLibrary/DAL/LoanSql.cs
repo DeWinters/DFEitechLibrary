@@ -17,6 +17,24 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
+        public Loan InsertLoan(int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
+        {
+            Loan loan = new Loan(); // TBC
+            return loan;
+        }
+
+        public Loan DeleteLoan(int loanId)
+        {
+            Loan loan = new Loan(); // TBC
+            return loan;
+        }
+
+        public Loan UpdateLoan(int loanId, int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
+        {
+            Loan loan = new Loan();
+            return loan;
+        }
+
         /************************************************************ Loan Getters **/
         public List<Loan> GetLoansById(int loanId)
         {

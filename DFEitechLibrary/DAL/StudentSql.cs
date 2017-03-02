@@ -17,6 +17,24 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
+        public Student InsertStudent(string fname, string lname)
+        {
+            Student student = new Student(); // TBC
+            return student;
+        }
+
+        public Student DeleteStudent(int id) // TBC
+        {
+            Student student = new Student();
+            return student;
+        }
+
+        public Student UpdateStudent(int id, string fname, string lname)
+        {
+            Student student = new Student(); // TBC
+            return student;
+        }
+
         /************************************************************ Student Getters **/
         public List<Student> GetStudentsById(int id)
         {

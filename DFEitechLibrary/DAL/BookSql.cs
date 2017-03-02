@@ -17,6 +17,24 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
+        public Book InsertBook(string title, string authF, string authL, BookType type)
+        {
+            Book book = new Book(); //TBC
+            return book;
+        }
+
+        public Book DeleteBook(int bookId)
+        {
+            Book book = new Book(); //TBC
+            return book;
+        }
+
+        public Book UpdateBook(int bookId, string authF, string authL, BookType type)
+        {
+            Book book = new Book(); //TBC
+            return book;
+        }
+
         /************************************************************ Book Setters **/
         public List<Book> GetBookById(int id)
         {
@@ -24,7 +42,7 @@ namespace DFEitechLibrary.DAL
             return matchedBooks;
         }
 
-        public List<Book> GetBookByName(string name)
+        public List<Book> GetBookByName(string title)
         {
             List<Book> matchedBooks = new List<Book>(); // TBC
             return matchedBooks;

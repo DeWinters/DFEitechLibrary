@@ -17,6 +17,24 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
+        public BookType InsertBookType(string name, TimeSpan duration, Decimal penalty)
+        {
+            BookType bookType = new BookType(); // TBC
+            return bookType;
+        }
+
+        public BookType DeleteBookType(int id)
+        {
+            BookType bookType = new BookType(); // TBC
+            return bookType;
+        }
+
+        public BookType UpdateBookType(int id, TimeSpan duration, Decimal penalty)
+        {
+            BookType bookType = new BookType(); // TBC
+            return bookType;
+        }
+
         /************************************************************ Type Getters **/
         public List<BookType> GetTypeById(int id)
         {
