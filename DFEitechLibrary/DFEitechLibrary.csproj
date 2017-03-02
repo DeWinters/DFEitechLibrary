@@ -49,6 +49,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -174,6 +175,12 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TypeController.cs" />
+    <Compile Include="DAL\BookSql.cs" />
+    <Compile Include="DAL\LoanSql.cs" />
+    <Compile Include="DAL\MySqlButler.cs" />
+    <Compile Include="DAL\MySqlLink.cs" />
+    <Compile Include="DAL\StudentSql.cs" />
+    <Compile Include="DAL\TypeSql.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
