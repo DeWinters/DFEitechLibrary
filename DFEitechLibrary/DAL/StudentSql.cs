@@ -12,6 +12,7 @@ namespace DFEitechLibrary.DAL
         public StudentSql()
         {
             cmd.Connection = con;
+            con.Open();
         }
         ~StudentSql()
         {

@@ -11,6 +11,7 @@ namespace DFEitechLibrary.DAL
         public MySqlButler()
         {
             cmd.Connection = con;
+            con.Open();            
         }
         ~MySqlButler()
         {
@@ -64,9 +65,9 @@ namespace DFEitechLibrary.DAL
             return bookSql.DeleteBook(bookId, typeSql);
         }
 
-        public Book UpdateBook(int bookId, string authF, string authL, BookType type, TypeSql typeSql)
+        public Book UpdateBook(int bookId, string title, string authF, string authL, BookType type, TypeSql typeSql)
         {
-            return bookSql.UpdateBook(bookId, authF, authL, type, typeSql);
+            return bookSql.UpdateBook(bookId, title, authF, authL, type, typeSql);
         }
 
         public List<Book> GetBookById(int id, TypeSql typeSql)
@@ -107,7 +108,7 @@ namespace DFEitechLibrary.DAL
 
         public List<BookType> GetTypeById(int id)
         {
-            return typeSql.GetTypeById(id);
+            return typeSql.GetTypesById(id);
         }
 
         public List<BookType> GetTypeByName(string name)
@@ -115,9 +116,9 @@ namespace DFEitechLibrary.DAL
             return typeSql.GetTypeByName(name);
         }
 
-        public List<BookType> GetTypeByDuration(int durationId)
+        public List<BookType> GetTypeByDuration(TimeSpan duration)
         {
-            return typeSql.GetTypeByDuration(durationId);
+            return typeSql.GetTypeByDuration(duration);
         }
 
         public List<BookType> GetTypeByPenalty(Decimal penalty)

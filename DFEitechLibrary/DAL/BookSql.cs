@@ -12,6 +12,7 @@ namespace DFEitechLibrary.DAL
         public BookSql()
         {
             cmd.Connection = con;
+            con.Open();
         }
         ~BookSql()
         {
@@ -68,7 +69,7 @@ namespace DFEitechLibrary.DAL
             return book;
         }
 
-        public Book UpdateBook(int bookId, string authF, string authL, BookType type, TypeSql typeSql)
+        public Book UpdateBook(int bookId, string title, string authF, string authL, BookType type, TypeSql typeSql)
         {
             Book book = new Book();
             if (bookId != 0 && authF != null && authL != null && type !=null)

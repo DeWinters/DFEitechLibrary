@@ -12,6 +12,7 @@ namespace DFEitechLibrary.DAL
         public LoanSql()
         {
             cmd.Connection = con;
+            con.Open();
         }
         ~LoanSql()
         {

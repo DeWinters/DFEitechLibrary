@@ -12,6 +12,7 @@ namespace DFEitechLibrary.DAL
         public TypeSql()
         {
             cmd.Connection = con;
+            con.Open();
         }
         ~TypeSql()
         {
@@ -121,7 +122,7 @@ namespace DFEitechLibrary.DAL
             return type;
         }
 
-        public List<BookType> GetTypeById(int typeId)
+        public List<BookType> GetTypesById(int typeId)
         {
             List<BookType> matchedTypes = new List<BookType>();
             if (typeId != 0)
@@ -187,14 +188,14 @@ namespace DFEitechLibrary.DAL
             return matchedTypes;
         }
 
-        public List<BookType> GetTypeByDuration(int durationId)
+        public List<BookType> GetTypeByDuration(TimeSpan duration)
         {
             List<BookType> matchedTypes = new List<BookType>();
-            if (durationId !=0)
+            if (duration !=null)
             {
                 try
                 {
-                    cmd.CommandText = "SELECT * FROM booktype WHERE type_duration=" + durationId;
+                    cmd.CommandText = "SELECT * FROM booktype WHERE type_duration=" + duration;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
