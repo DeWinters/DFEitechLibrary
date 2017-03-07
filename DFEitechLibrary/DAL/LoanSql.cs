@@ -9,10 +9,11 @@ namespace DFEitechLibrary.DAL
 {
     public class LoanSql : MySqlLink
     {
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public LoanSql()
         {
             cmd.Connection = con;
-            con.Open();
         }
         ~LoanSql()
         {
@@ -26,6 +27,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "INSERT INTO loan (student_id, book_id, loan_date, loan_due, loan_active, loan_penalty) VALUES(@STUDENT, @BOOK, @DATE, @DUE, @ACTIVE, @ACCRUED)";
                     cmd.Parameters.AddWithValue("@STUDENT", studentId);
                     cmd.Parameters.AddWithValue("@BOOK", bookId);
@@ -37,7 +39,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Insert Loan Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return loan;
@@ -50,6 +56,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     loan = FindLoanById(loanId);
                     cmd.CommandText = "DELETE FROM student WHERE student_id= @ID";
                     cmd.Parameters.AddWithValue("@ID", loanId);
@@ -57,7 +64,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Delete Loan(id)", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return loan;
@@ -70,6 +81,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "UPDATE loan SET student_id=@STUDENT, book_id=@BOOK, loan_date=@DATE, loan_due=@DUE, loan_active=@ACTIVE, loan_accrued=@ACCRUED WHERE loan_id=@LOAN";
                     cmd.Parameters.AddWithValue("@LOAN", loanId);
                     cmd.Parameters.AddWithValue("@STUDENT", studentId);
@@ -84,7 +96,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error report string
+                    log.Error("Update Loan(*) Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return loan;
@@ -98,6 +114,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE loan_id=" + loanId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -113,7 +130,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Find Loan(id)", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return loan;
@@ -126,6 +147,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE loan_id=" + loanId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -143,7 +165,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(id) Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -156,6 +182,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE student_id=" + studentId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -173,7 +200,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(studentId) Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -186,6 +217,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE book_id=" + bookId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -203,7 +235,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(bookId) Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -216,6 +252,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE loan_date=" + loanDate;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -233,7 +270,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(loanDate) Query Error", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -263,7 +304,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(loanDue) Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -276,6 +321,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE loan_active=" + active;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -293,7 +339,11 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(active)", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             return matchedLoans;
@@ -306,6 +356,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM loan WHERE loan_accrued=" + accrued;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -323,10 +374,28 @@ namespace DFEitechLibrary.DAL
                 }
                 catch (MySqlException e)
                 {
-                    // lacking error export string
+                    log.Error("Get Loans(accrued) query Failure", e);
                 }
             }
             return matchedLoans;
+        }
+
+        public Loan FailedLoanQuery()
+        {
+            DateTime loanDate = new DateTime(1, 1, 1);
+            DateTime loanDue = new DateTime(5000,500,50);
+            Loan failure = new Loan() { Id = 999, StudentId = 999, BookId = 999, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
+            return failure;
+        }
+
+        public List<Loan> FailedLoanList()
+        {
+            List<Loan> failures = new List<Loan>();
+            DateTime loanDate = new DateTime(1, 1, 1);
+            DateTime loanDue = new DateTime(5000, 500, 50);
+            Loan failure = new Loan() { Id = 999, StudentId = 999, BookId = 999, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
+            failures.Add(failure);
+            return failures;
         }
     }
 }

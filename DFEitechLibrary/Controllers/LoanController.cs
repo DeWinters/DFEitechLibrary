@@ -8,7 +8,8 @@ namespace DFEitechLibrary.Controllers
 {
     public class LoanController : Controller
     {
-        // GET: Loan
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public ActionResult ListLoans()
         {
             return View();

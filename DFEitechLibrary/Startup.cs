@@ -1,6 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
+[assembly: log4net.Config.XmlConfigurator(Watch =true)]
 [assembly: OwinStartupAttribute(typeof(DFEitechLibrary.Startup))]
 namespace DFEitechLibrary
 {

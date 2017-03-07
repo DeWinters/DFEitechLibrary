@@ -9,10 +9,11 @@ namespace DFEitechLibrary.DAL
 {
     public class TypeSql : MySqlLink
     {
+        private static readonly log4net.ILog log = LogButler.GetLogger();
         public TypeSql()
         {
             cmd.Connection = con;
-            con.Open();
+            
         }
         ~TypeSql()
         {
@@ -26,6 +27,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "INSERT INTO book (type_name, type_duration, type_penalty) VALUES(@NAME, @DURATION, @PENALTY)";
                     cmd.Parameters.AddWithValue("@NAME", name);
                     cmd.Parameters.AddWithValue("@DURATION", duration);
@@ -35,6 +37,11 @@ namespace DFEitechLibrary.DAL
                 catch (MySqlException e)
                 {
                     bookType.Name = e.ToString();
+                    log.Error("Insert Type Query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -51,6 +58,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     bookType = FindTypeById(typeId);
                     cmd.CommandText = "DELETE FROM booktype WHERE type_id= @ID";
                     cmd.Parameters.AddWithValue("@ID", typeId);
@@ -59,6 +67,11 @@ namespace DFEitechLibrary.DAL
                 catch (MySqlException e)
                 {
                     bookType.Name = e.ToString();
+                    log.Error("Delete Type query Failure", e);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -100,6 +113,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM booktype WHERE type_id=" + typeId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -113,6 +127,11 @@ namespace DFEitechLibrary.DAL
                 catch (MySqlException e)
                 {
                     type.Name = e.ToString();
+                    log.Error("Find Type(id) Query Failure");
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -129,6 +148,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM booktype WHERE type_id=" + typeId;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -145,6 +165,12 @@ namespace DFEitechLibrary.DAL
                 {
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
+
+                    log.Error("Get Types(id) Query Failure");
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -162,6 +188,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM booktype WHERE type_name=" + name;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -178,6 +205,12 @@ namespace DFEitechLibrary.DAL
                 {
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
+
+                    log.Error("Get Types(name) Query Failure");
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -195,6 +228,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Close();
                     cmd.CommandText = "SELECT * FROM booktype WHERE type_duration=" + duration;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -211,6 +245,12 @@ namespace DFEitechLibrary.DAL
                 {
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
+
+                    log.Error("Get Types(duration) Query Failure");
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -228,6 +268,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM booktype WHERE type_penalty=" + penalty;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
@@ -244,6 +285,12 @@ namespace DFEitechLibrary.DAL
                 {
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
+
+                    log.Error("Get Types(penalty) Query Failure");
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
             else
@@ -252,6 +299,22 @@ namespace DFEitechLibrary.DAL
                 matchedTypes.Add(type);
             }
             return matchedTypes;
+        }
+
+        public BookType FailedTypeQuery()
+        {
+            TimeSpan duration = new TimeSpan(9999, 11, 11);
+            BookType failure = new BookType() { Id = 999, Name = "Handling Error", Duration=duration, Penalty = 999.99m };
+            return failure;
+        }
+
+        public List<BookType> FailedTypeList()
+        {
+            List<BookType> failures = new List<BookType>();
+            TimeSpan duration = new TimeSpan(9999, 11, 11);
+            BookType failure = new BookType() { Id = 999, Name = "Handling Error", Duration = duration, Penalty = 999.99m };
+            failures.Add(failure);
+            return failures;
         }
     }
 }

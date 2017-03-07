@@ -8,7 +8,8 @@ namespace DFEitechLibrary.Controllers
 {
     public class TypeController : Controller
     {
-        // GET: Type
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public ActionResult ListTypes() // rename me
         {
 

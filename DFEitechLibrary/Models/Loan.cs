@@ -7,6 +7,8 @@ namespace DFEitechLibrary.Models
 {
     public class Loan
     {
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public int Id { get; set; }
         public int StudentId { get; set; }
         public int BookId { get; set; }

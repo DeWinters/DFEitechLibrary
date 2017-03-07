@@ -8,7 +8,8 @@ namespace DFEitechLibrary.Controllers
 {
     public class BookController : Controller
     {
-        // GET: Book
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public ActionResult ListBooks()
         {
             return View();

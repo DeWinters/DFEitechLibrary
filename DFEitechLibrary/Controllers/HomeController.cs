@@ -8,6 +8,8 @@ namespace DFEitechLibrary.Controllers
 {
     public class HomeController : Controller
     {
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         public ActionResult Index()
         {
             return View();

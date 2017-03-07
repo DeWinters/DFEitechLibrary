@@ -13,6 +13,8 @@ namespace DFEitechLibrary.Controllers
     [Authorize]
     public class ManageController : Controller
     {
+        private static readonly log4net.ILog log = LogButler.GetLogger();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
