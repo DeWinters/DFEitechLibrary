@@ -7,7 +7,7 @@ namespace DFEitechLibrary.Models
 {
     public class BookType
     {
-        private static readonly log4net.ILog log = LogButler.GetLogger();
+        private static readonly log4net.ILog log = LogLink.GetLogger();
 
         public int Id { get; set; }
         public string Name { get; set; }

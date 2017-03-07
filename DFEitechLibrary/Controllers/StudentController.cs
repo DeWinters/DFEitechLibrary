@@ -9,7 +9,7 @@ namespace DFEitechLibrary.Controllers
 {
     public class StudentController : Controller
     {
-        private static readonly log4net.ILog log = LogButler.GetLogger();
+        private static readonly log4net.ILog log = LogLink.GetLogger();
 
         public ActionResult ListStudents()
         {

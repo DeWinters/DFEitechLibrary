@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace DFEitechLibrary
 {
-    public class LogButler
+    public class LogLink
     {
         public static log4net.ILog GetLogger([CallerFilePath]string filename = "")
         {
