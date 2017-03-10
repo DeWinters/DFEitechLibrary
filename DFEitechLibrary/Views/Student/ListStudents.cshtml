@@ -1,9 +1,25 @@
 ﻿@model IEnumerable<DFEitechLibrary.Models.Student>
 @{
     ViewBag.Title = "ListStudents";
+
+    
+    var wb = new WebGrid(source: Model, columnNames: new[] { "Id", "NameL", "NameF" });
 }
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
 
-<h2>ListStudents</h2>
+<div id="studentSlide">
+    <div>
+        <h2>ListStudents</h2>
+        @wb.GetHtml(columns: wb.Columns(
+        wb.Column(columnName: "Id", header: "ID#"),
+        wb.Column(columnName: "NameL", header: "Last"),
+        wb.Column(columnName: "NameF", header: "First")
+    ))
+    </div>
 
-@Html.Partial("_StudentForm", new DFEitechLibrary.Models.Student())
+    <div>
+        @Html.Partial("_StudentForm", new DFEitechLibrary.Models.Student())
+    </div>
+</div>
+
 

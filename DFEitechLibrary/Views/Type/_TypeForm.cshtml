@@ -1,0 +1,67 @@
+﻿@model DFEitechLibrary.Models.BookType
+@{
+    ViewBag.Title = "_TypeForm";
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>BookType Creator</h3>
+        @using (Html.BeginForm("InsertType", "Type"))
+        {
+            @Html.LabelFor(model => model.Name, "Type Name", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Name, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+            @Html.LabelFor(model => model.Duration, "Lend Days", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Duration, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+            @Html.LabelFor(model => model.Penalty, "Late Fee", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Penalty, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+            <input type="submit" class="btn btn-default" value="Create New Type &raquo;" />
+        }
+    </div>
+
+    <div class="col-md-4">
+        <h3>Load Type</h3>
+        @using (Html.BeginForm("_TypeForm", "Type"))
+        {
+            @Html.LabelFor(model => model.Id, "By ID#", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Id, new { @class = "control-label col-md-2", style = "width: 100px;" })<br />
+            <input type="submit" class="btn btn-default" value="Load BookType &raquo;" />
+        }
+        <h3>Edit BookType</h3>
+        @using (Html.BeginForm("_TypeForm", "Type"))
+        {
+            @Html.LabelFor(model => model.Name, "New Name", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Name, new { @Value = @Model.Name, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+            @Html.LabelFor(model => model.Duration, "New Duration", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Duration, new { @Value = @Model.Duration, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+            @Html.LabelFor(model => model.Penalty, "New Fine", htmlAttributes: new { @class = "control-label col-md-5" })
+            @Html.TextBoxFor(model => model.Penalty, new { @Value = @Model.Penalty, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+            <input type="submit" class="btn btn-default" value="Edit BookType &raquo;" />
+        }
+    </div>
+
+    <div class="col-md-4">
+        <h3>Delete BookType</h3>
+        @using (Html.BeginForm("ListTypes", "Type"))
+        {
+            @Html.LabelFor(model => model.Id, "By ID#", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Id, new { @Value = 0, style = "width: 150px;" })<br />
+
+            @Html.LabelFor(model => model.Name, "Type Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Name, new { @Value = @Model.Name, style = "width: 150px;" })<br />
+
+            @Html.LabelFor(model => model.Duration, "Lend Days", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Duration, new { @Value = Model.Duration, style = "width: 150px;" })<br />
+
+            @Html.LabelFor(model => model.Penalty, "Late Fee", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.Penalty, new { @Value = Model.Penalty, style = "width: 150px;" })<br />
+            <input type="submit" class="btn btn-default" value="Delete Type &raquo;" />
+        }
+    </div>
+</div>
+
+

@@ -28,11 +28,12 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "INSERT INTO book (type_name, type_duration, type_penalty) VALUES(@NAME, @DURATION, @PENALTY)";
+                    cmd.CommandText = "INSERT INTO booktype (type_name, type_duration, type_penalty) VALUES(@NAME, @DURATION, @PENALTY)";
                     cmd.Parameters.AddWithValue("@NAME", name);
                     cmd.Parameters.AddWithValue("@DURATION", duration);
                     cmd.Parameters.AddWithValue("@PENALTY", penalty);
                     cmd.ExecuteNonQuery();
+                    log.Debug("Type_" + name + "_Insert");
                 }
                 catch (MySqlException e)
                 {
@@ -127,7 +128,7 @@ namespace DFEitechLibrary.DAL
                 catch (MySqlException e)
                 {
                     type.Name = e.ToString();
-                    log.Error("Find Type(id) Query Failure");
+                    log.Error("Find Type(id) Query Failure", e);
                 }
                 finally
                 {
@@ -166,7 +167,7 @@ namespace DFEitechLibrary.DAL
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
 
-                    log.Error("Get Types(id) Query Failure");
+                    log.Error("Get Types(id) Query Failure", e);
                 }
                 finally
                 {
@@ -206,7 +207,7 @@ namespace DFEitechLibrary.DAL
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
 
-                    log.Error("Get Types(name) Query Failure");
+                    log.Error("Get Types(name) Query Failure", e);
                 }
                 finally
                 {
@@ -246,7 +247,7 @@ namespace DFEitechLibrary.DAL
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
 
-                    log.Error("Get Types(duration) Query Failure");
+                    log.Error("Get Types(duration) Query Failure", e);
                 }
                 finally
                 {
@@ -286,7 +287,7 @@ namespace DFEitechLibrary.DAL
                     BookType type = new BookType() { Name = e.ToString() };
                     matchedTypes.Add(type);
 
-                    log.Error("Get Types(penalty) Query Failure");
+                    log.Error("Get Types(penalty) Query Failure", e);
                 }
                 finally
                 {
@@ -299,6 +300,38 @@ namespace DFEitechLibrary.DAL
                 matchedTypes.Add(type);
             }
             return matchedTypes;
+        }
+
+        public List<BookType> GetAllTypes()
+        {
+            List<BookType> allTypes = new List<BookType>();
+            try
+            {
+                con.Open();
+                cmd.CommandText = "SELECT * FROM booktype";
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    BookType type = new BookType();
+                    type.Id = rdr.GetInt32(0);
+                    type.Name = rdr.GetString(1);
+                    type.Duration = rdr.GetTimeSpan(2);
+                    type.Penalty = rdr.GetDecimal(3);
+                    allTypes.Add(type);
+                }
+            }
+            catch (MySqlException e)
+            {
+                BookType type = new BookType() { Name = e.ToString() };
+                allTypes.Add(type);
+
+                log.Error("Get Types(id) Query Failure", e);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return allTypes;
         }
 
         public BookType FailedTypeQuery()

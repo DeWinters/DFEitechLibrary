@@ -1,0 +1,20 @@
+﻿@model List<DFEitechLibrary.Models.BookType>
+@{
+
+}
+
+<div>
+    <h3>Search Refiner</h3>
+    @using (Html.BeginForm("ListTypesById", "Type"))
+    {
+        <input type="submit" value="By ID" /><br />
+        <select name="id">
+            @foreach (var bookType in Model)
+            {
+                <option value=@bookType.Id>@bookType.Name</option>
+
+            }
+            <option value=2>2</option>
+        </select>
+    }
+</div>

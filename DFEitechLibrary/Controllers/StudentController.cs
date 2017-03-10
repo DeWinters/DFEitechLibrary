@@ -10,15 +10,17 @@ namespace DFEitechLibrary.Controllers
     public class StudentController : Controller
     {
         private static readonly log4net.ILog log = LogLink.GetLogger();
+        public MySqlButler mySqlButler = new MySqlButler();
+
 
         public ActionResult ListStudents()
         {
-            return View();
+            return View(mySqlButler.studentSql.GetAllStudents());
         }
 
-        public ActionResult _InsertStudent(int id, string nameL, string nameF)
+        public ActionResult InsertStudent(string nameL, string nameF)
         {
-            return View();
+            return View(mySqlButler.studentSql.InsertStudent(nameL,nameF));
         }
     }
 }

@@ -5,9 +5,6 @@
 <h3>Student Creator</h3>
 @using (Html.BeginForm("InsertStudent", "Student"))
 {
-    @Html.LabelFor(model => model.Id, "ID#")
-    @Html.TextBoxFor(model => model.Id, new { style = "width: 60px;" })<br />
-
     @Html.LabelFor(model => model.NameL, "Last Name")
     @Html.TextBoxFor(model => model.NameL, new { style = "width: 150px;" })<br />
 

@@ -261,6 +261,10 @@
     <Content Include="Views\Student\ListStudents.cshtml" />
     <Content Include="Views\Type\ListTypes.cshtml" />
     <Content Include="Views\Student\_StudentForm.cshtml" />
+    <Content Include="Views\Student\InsertStudent.cshtml" />
+    <Content Include="Views\Type\_TypeForm.cshtml" />
+    <Content Include="Views\Type\_SearchTypes.cshtml" />
+    <Content Include="Views\Type\RefinedTypes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

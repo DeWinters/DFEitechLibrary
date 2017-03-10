@@ -1,0 +1,15 @@
+﻿@model DFEitechLibrary.Models.Student
+@{
+    ViewBag.Title = "InsertStudent";
+}
+
+<div>
+    <h2>New Student</h2>
+    <p>
+        ID: @Model.Id <br />
+        Last: @Model.NameL <br />
+        First: @Model.NameF <br />
+    </p>
+    @Html.ActionLink("BookTypes", "ListTypes", "Type")
+</div>
+

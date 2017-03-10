@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.studentSlide{
+    border: solid black 1px;
+    background-color: gray;
+    width: 300px;
+}
+
+.typeSlide{
+border: solid black 1px;
+    background-color: gray;
+    width: 300px;
+}

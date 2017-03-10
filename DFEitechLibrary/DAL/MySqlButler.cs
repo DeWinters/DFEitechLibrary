@@ -19,10 +19,10 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
-        LoanSql loanSql = new LoanSql();
-        BookSql bookSql = new BookSql();
-        TypeSql typeSql = new TypeSql();
-        StudentSql studentSql = new StudentSql();
+        public LoanSql loanSql = new LoanSql();
+        public BookSql bookSql = new BookSql();
+        public TypeSql typeSql = new TypeSql();
+        public StudentSql studentSql = new StudentSql();
 
         /************************************************************ Student Passers **/
         public Student InsertStudent(string fname, string lname)
@@ -251,6 +251,20 @@ namespace DFEitechLibrary.DAL
             }
         }
 
+        public BookType FindTypeById(int id)
+        {
+            try
+            {
+                log.Debug("BookType_" + id + "_Get");
+                return typeSql.FindTypeById(id);
+            }
+            catch (Exception e)
+            {
+                log.Error("Get BookTypes(id) Butler Failure", e);
+                return typeSql.FailedTypeQuery();
+            }
+        }
+
         public List<BookType> GetTypeById(int id)
         {
             try
@@ -305,6 +319,36 @@ namespace DFEitechLibrary.DAL
                 log.Error("Get BookType(penalty) Butler Failure", e);
                 return typeSql.FailedTypeList();
             }
+        }
+
+        public List<BookType> GetAllTypes()
+        {
+            try
+            {
+                log.Debug("BookType_All_Get");
+                return typeSql.GetAllTypes();
+            }
+            catch(Exception e)
+            {
+                log.Error("Get BookType(*) Butler Failure", e);
+                return typeSql.FailedTypeList();
+            }
+        }
+
+        public BookType FailedTypeQuery()
+        {
+            try
+            {
+                log.Debug("BookType_fail_Get");
+                return typeSql.FailedTypeQuery();
+            }
+            catch(Exception e)
+            {
+                log.Error("Get BookTypes_fail_Get");
+                BookType blankBook = new BookType() { Id = 999, Name = "Blank Slot" };
+                return blankBook;
+            }
+            
         }
 
         /************************************************************ Loan Passers *****/

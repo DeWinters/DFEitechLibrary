@@ -1,0 +1,137 @@
+20:29:26,979 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:33:39,487 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:39:46,351 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Ordinary_Inserted
+ewLine20:39:46,929 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Insert Type Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type_name' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.TypeSql.InsertBookType(String name, TimeSpan duration, Decimal penalty) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 35
+20:50:56,364 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:52:28,223 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:52:53,606 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Original_Inserted
+ewLine20:52:53,715 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Insert Type Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type_name' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.TypeSql.InsertBookType(String name, TimeSpan duration, Decimal penalty) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 35
+21:08:44,920 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:09:31,775 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Original_Inserted
+ewLine21:09:31,920 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] DEBUG - Type_Original_Insert
+ewLine21:18:21,323 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:20:54,370 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Special_Inserted
+ewLine21:20:54,553 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] DEBUG - Type_Special_Insert
+ewLine21:23:00,720 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:23:46,440 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:26:17,451 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_ClassText_Inserted
+ewLine21:26:17,654 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] DEBUG - Type_ClassText_Insert
+ewLine21:26:17,656 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:35:59,901 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:20:15,317 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:08:31,148 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:08:45,674 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_1_Get
+ewLine23:13:51,152 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:14:02,603 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_1_Get
+ewLine23:40:13,557 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:40:34,383 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_2_Get
+ewLine23:51:10,861 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:52:12,588 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine00:09:03,880 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:11:56,723 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine00:14:23,871 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine00:16:56,334 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine00:25:20,699 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:28:02,910 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:29:26,280 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:30:42,945 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:31:37,862 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:34:58,938 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:36:10,727 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:37:36,296 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:38:23,948 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:40:15,020 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:41:29,680 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:41:53,918 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:43:10,062 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:45:15,031 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:46:41,806 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:47:14,308 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:47:49,826 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:48:19,810 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:48:45,550 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:55:45,123 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:58:04,715 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:59:57,379 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine01:03:11,034 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine01:04:06,443 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine01:08:35,588 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine01:10:25,867 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_2_Get
+ewLine02:35:59,347 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:38:17,437 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:40:34,776 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:43:15,572 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:43:15,603 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:45:00,109 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:45:57,219 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:46:45,152 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine03:32:22,037 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine03:33:10,529 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:11:51,910 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:22:18,429 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:25:08,434 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:25:19,689 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:29:49,044 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:30:42,067 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_TestType2_Inserted
+ewLine18:30:42,557 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] DEBUG - Type_TestType2_Insert
+ewLine18:30:42,561 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:34:15,767 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine18:40:41,472 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:32:53,926 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:34:56,071 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:36:39,151 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:37:29,954 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:38:33,811 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:38:45,392 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_0_Get
+ewLine19:53:26,895 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:55:43,649 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:55:55,675 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_0_Get
+ewLine19:57:37,754 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine19:58:24,233 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_0_Get
+ewLine20:03:55,527 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:07:34,962 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:12:48,693 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:15:41,884 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:17:15,548 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:18:47,345 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:19:00,040 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine20:25:25,688 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:26:44,694 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:29:26,406 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:31:37,063 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:31:47,431 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine20:32:07,954 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine20:32:16,524 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine20:34:10,629 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:34:25,033 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine20:35:31,471 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:39:05,494 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:39:47,164 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:40:38,345 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:41:48,486 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:42:49,084 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:43:55,875 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:46:21,729 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:51:47,566 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:52:09,116 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_2_Get
+ewLine20:54:03,103 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine20:54:13,429 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_4_Get
+ewLine
