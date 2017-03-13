@@ -23,16 +23,16 @@ namespace DFEitechLibrary.DAL
         public Book InsertBook(string title, string authF, string authL, BookType type, TypeSql typeSql)
         {
             Book book = new Book(); 
-            if (title != null && authL != null && type !=null)
+            if (true)
             {
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "INSERT INTO book (book_title, book_auth_first, book_auth_last, type) VALUES(@TITLE, @FIRST, @LAST, @TYPE)";
+                    cmd.CommandText = "INSERT INTO book (book_title, book_auth_first, book_auth_last, book_type) VALUES(@TITLE, @FIRST, @LAST, @TYPE)";
                     cmd.Parameters.AddWithValue("@TITLE", title);
                     cmd.Parameters.AddWithValue("@FIRST", authF);
                     cmd.Parameters.AddWithValue("@LAST", authL);
-                    cmd.Parameters.AddWithValue("@TYPE", type);
+                    cmd.Parameters.AddWithValue("@TYPE", type.Id);
                     cmd.ExecuteNonQuery();
                 }
                 catch (MySqlException e)
@@ -94,7 +94,7 @@ namespace DFEitechLibrary.DAL
                     cmd.Parameters.AddWithValue("@ID", bookId);
                     cmd.Parameters.AddWithValue("@FNAME", authF);
                     cmd.Parameters.AddWithValue("@LNAME", authL);
-                    cmd.Parameters.AddWithValue("@TYPE", type);
+                    cmd.Parameters.AddWithValue("@TYPE", type.Id);
                     cmd.ExecuteNonQuery();
 
                     book = FindBookById(bookId, typeSql);
@@ -117,7 +117,7 @@ namespace DFEitechLibrary.DAL
                     cmd.CommandText = "UPDATE book SET book_auth_last=@LNAME, book_type=@TYPE WHERE book_id=@ID";
                     cmd.Parameters.AddWithValue("@ID", bookId);
                     cmd.Parameters.AddWithValue("@LNAME", authL);
-                    cmd.Parameters.AddWithValue("@TYPE", type);
+                    cmd.Parameters.AddWithValue("@TYPE", type.Id);
                     cmd.ExecuteNonQuery();
 
                     book = FindBookById(bookId, typeSql);
@@ -148,7 +148,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM book WHERE student_id=" + bookId;
+                    cmd.CommandText = "SELECT * FROM book WHERE book_id=" + bookId; 
+                    //cmd.Parameters.AddWithValue("@BookID", bookId);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -162,7 +163,7 @@ namespace DFEitechLibrary.DAL
                 catch (MySqlException e)
                 {
                     book.Title = e.ToString();
-                    log.Error("Find Student(id, typeSql) Query Failure", e);
+                    log.Error("Find Book(bookId, typeSql) Query Failure", e);
                 }
                 finally
                 {
@@ -184,7 +185,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM book WHERE student_id=" + bookId;
+                    cmd.CommandText = "SELECT * FROM book WHERE book_id=@BOOKID";
+                    cmd.Parameters.AddWithValue("@BOOKID", bookId);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -224,7 +226,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM book WHERE book_title=" + title;
+                    cmd.CommandText = "SELECT * FROM book WHERE book_title=@TITLE";
+                    cmd.Parameters.AddWithValue("@TITLE", title);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -264,7 +267,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM book WHERE book_auth_first=" + authF;
+                    cmd.CommandText = "SELECT * FROM book WHERE book_auth_first=@AUTHF";
+                    cmd.Parameters.AddWithValue("@AUTHF", authF);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -304,7 +308,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM book WHERE book_auth_last=" + authL;
+                    cmd.CommandText = "SELECT * FROM book WHERE book_auth_last=@AUTHL";
+                    cmd.Parameters.AddWithValue("@AUTHL", authL);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -332,6 +337,59 @@ namespace DFEitechLibrary.DAL
             {
                 Book book = new Book() { Title = "Missing Parameter" };
                 matchedBooks.Add(book);
+            }
+            return matchedBooks;
+        }
+
+        public List<Book> GetBooksByType(BookType type, TypeSql typeSql)
+        {
+            List<Book> matchedBooks = new List<Book>();
+            con.Open();
+            cmd.CommandText = "SELECT * FROM book WHERE book_type=@TYPE";
+            cmd.Parameters.AddWithValue("@TYPE", type.Id);
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Book book = new Book();
+                book.Id = rdr.GetInt32(0);
+                book.Title = rdr.GetString(1);
+                book.AuthL = rdr.GetString(2);
+                book.AuthF = rdr.GetString(3);
+                book.TomeType = typeSql.FindTypeById(rdr.GetInt32(4));
+                matchedBooks.Add(book);
+            }
+            con.Close();
+            return matchedBooks;
+        }
+
+        public List<Book> GetAllBooks(TypeSql typeSql)
+        {
+            List<Book> matchedBooks = new List<Book>();
+            try
+            {
+                con.Open();
+                cmd.CommandText = "SELECT * FROM book";
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    Book book = new Book();
+                    book.Id = rdr.GetInt32(0);
+                    book.Title = rdr.GetString(1);
+                    book.AuthL = rdr.GetString(2);
+                    book.AuthF = rdr.GetString(3);
+                    book.TomeType = typeSql.FindTypeById(rdr.GetInt32(4));
+                    matchedBooks.Add(book);
+                }
+            }
+            catch (MySqlException e)
+            {
+                Book book = new Book() { Title = e.ToString() };
+                matchedBooks.Add(book);
+                log.Error("Get Book(id, typeSql) Query Failure", e);
+            }
+            finally
+            {
+                con.Close();
             }
             return matchedBooks;
         }

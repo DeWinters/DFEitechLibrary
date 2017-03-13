@@ -20,15 +20,22 @@ namespace DFEitechLibrary.DAL
             con.Close();
         }
 
-        public Loan InsertLoan(int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
+        public Loan InsertLoan(int studentId, int bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             Loan loan = new Loan();
-            if (studentId !=0 && bookId !=0 && loanDate !=null && loanDue !=null && active !=false && accrued !=0)
+            if (studentId !=0 && bookId !=0)
             {
                 try
                 {
+                    DateTime loanDate = DateTime.Now;
+                    Book book = bookSql.FindBookById(bookId, typeSql);
+                        TimeSpan duration = book.TomeType.Duration;
+                    DateTime loanDue = loanDate + duration;  
+                    Boolean active = true;
+                    Decimal accrued = 0.0m;
+
                     con.Open();
-                    cmd.CommandText = "INSERT INTO loan (student_id, book_id, loan_date, loan_due, loan_active, loan_penalty) VALUES(@STUDENT, @BOOK, @DATE, @DUE, @ACTIVE, @ACCRUED)";
+                    cmd.CommandText = "INSERT INTO loan (student_id, book_id, loan_date, loan_due, loan_active, loan_accrued) VALUES(@STUDENT, @BOOK, @DATE, @DUE, @ACTIVE, @ACCRUED)";
                     cmd.Parameters.AddWithValue("@STUDENT", studentId);
                     cmd.Parameters.AddWithValue("@BOOK", bookId);
                     cmd.Parameters.AddWithValue("@DATE", loanDate);
@@ -49,7 +56,7 @@ namespace DFEitechLibrary.DAL
             return loan;
         }
 
-        public Loan DeleteLoan(int loanId)
+        public Loan DeleteLoan(int loanId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             Loan loan = new Loan();
             if (loanId != 0)
@@ -57,7 +64,7 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    loan = FindLoanById(loanId);
+                    loan = FindLoanById(loanId, studentSql, bookSql, typeSql);
                     cmd.CommandText = "DELETE FROM student WHERE student_id= @ID";
                     cmd.Parameters.AddWithValue("@ID", loanId);
                     cmd.ExecuteNonQuery();
@@ -74,7 +81,7 @@ namespace DFEitechLibrary.DAL
             return loan;
         }
 
-        public Loan UpdateLoan(int loanId, int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
+        public Loan UpdateLoan(int loanId, int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             Loan loan = new Loan();
             if (loanId !=0 && studentId !=0 && bookId !=0 && loanDate !=null && loanDue !=null && active !=false && accrued !=0)
@@ -92,7 +99,7 @@ namespace DFEitechLibrary.DAL
                     cmd.Parameters.AddWithValue("@ACCRUED", accrued);
                     cmd.ExecuteNonQuery();
 
-                    loan = FindLoanById(loanId);
+                    loan = FindLoanById(loanId, studentSql, bookSql, typeSql);
                 }
                 catch (MySqlException e)
                 {
@@ -107,7 +114,7 @@ namespace DFEitechLibrary.DAL
         }
 
         /************************************************************ Loan Getters **/
-        public Loan FindLoanById(int loanId)
+        public Loan FindLoanById(int loanId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             Loan loan = new Loan();
             if (loanId != 0)
@@ -120,8 +127,8 @@ namespace DFEitechLibrary.DAL
                     while (rdr.Read())
                     {
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -140,7 +147,7 @@ namespace DFEitechLibrary.DAL
             return loan;
         }
 
-        public List<Loan> GetLoansById(int loanId)
+        public List<Loan> GetLoansById(int loanId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (loanId != 0)
@@ -154,8 +161,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -175,7 +182,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoansByStudent(int studentId)
+        public List<Loan> GetLoansByStudent(int studentId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (studentId != 0)
@@ -189,8 +196,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -210,7 +217,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoanByBookId(int bookId)
+        public List<Loan> GetLoanByBookId(int bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (bookId != 0)
@@ -224,8 +231,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -245,7 +252,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoanByDate(DateTime loanDate)
+        public List<Loan> GetLoanByDate(DateTime loanDate, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (loanDate !=null)
@@ -259,8 +266,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -280,7 +287,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoanByDue(DateTime loanDue)
+        public List<Loan> GetLoanByDue(DateTime loanDue, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (loanDue !=null)
@@ -293,8 +300,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -314,7 +321,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoanByActive(Boolean active)
+        public List<Loan> GetLoanByActive(Boolean active, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (active !=false)
@@ -328,8 +335,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -349,7 +356,7 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
-        public List<Loan> GetLoanByAccrued(Decimal accrued)
+        public List<Loan> GetLoanByAccrued(Decimal accrued, StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
         {
             List<Loan> matchedLoans = new List<Loan>();
             if (accrued != 0)
@@ -363,8 +370,8 @@ namespace DFEitechLibrary.DAL
                     {
                         Loan loan = new Loan();
                         loan.Id = rdr.GetInt32(0);
-                        loan.StudentId = rdr.GetInt32(1);
-                        loan.BookId = rdr.GetInt32(2);
+                        loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                        loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
                         loan.LoanDate = rdr.GetDateTime(3);
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
@@ -380,20 +387,41 @@ namespace DFEitechLibrary.DAL
             return matchedLoans;
         }
 
+        public List<Loan> GetAllLoans(StudentSql studentSql, BookSql bookSql, TypeSql typeSql)
+        {
+            List<Loan> matchedLoans = new List<Loan>();
+            con.Open();
+            cmd.CommandText = "SELECT * FROM loan";
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Loan loan = new Loan();
+                loan.Id = rdr.GetInt32(0);
+                loan.Pupil = studentSql.FindStudentById(rdr.GetInt32(1));
+                loan.Tome = bookSql.FindBookById(rdr.GetInt32(2), typeSql);
+                loan.LoanDate = rdr.GetDateTime(3);
+                loan.LoanDue = rdr.GetDateTime(4);
+                loan.Active = rdr.GetBoolean(5);
+                loan.Accrued = rdr.GetDecimal(6);
+                matchedLoans.Add(loan);
+            }
+            return matchedLoans;
+        }
+
         public Loan FailedLoanQuery()
         {
-            DateTime loanDate = new DateTime(1, 1, 1);
-            DateTime loanDue = new DateTime(5000,500,50);
-            Loan failure = new Loan() { Id = 999, StudentId = 999, BookId = 999, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
+            DateTime loanDate = new DateTime(2001, 1, 1);
+            DateTime loanDue = new DateTime(2001, 1, 2);
+            Loan failure = new Loan() { Id = 999, Pupil = null, Tome = null, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
             return failure;
         }
 
         public List<Loan> FailedLoanList()
         {
             List<Loan> failures = new List<Loan>();
-            DateTime loanDate = new DateTime(1, 1, 1);
-            DateTime loanDue = new DateTime(5000, 500, 50);
-            Loan failure = new Loan() { Id = 999, StudentId = 999, BookId = 999, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
+            DateTime loanDate = new DateTime(1, 1, 2001);
+            DateTime loanDue = new DateTime(2, 1, 2001);
+            Loan failure = new Loan() { Id = 999, Pupil = null, Tome = null, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
             failures.Add(failure);
             return failures;
         }

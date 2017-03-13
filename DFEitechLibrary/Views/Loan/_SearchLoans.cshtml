@@ -1,0 +1,90 @@
+﻿@model List<DFEitechLibrary.Models.Loan>
+@{
+
+}
+
+<div>
+    Search Refinement
+    <ul class="nav navbar-nav">
+        <li>
+            @using (Html.BeginForm("ListLoansById", "Loan"))
+            {
+                <input type="submit" value="By ID" /><br />
+                <select name="id">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.Id>@loan.Id</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListLoansByStudent", "Loan"))
+            {
+                <input type="submit" value="By Student" /><br />
+                <select name="student">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.Pupil.Id>@loan.Pupil.Id:@loan.Pupil.NameF @loan.Pupil.NameL </option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListLoansByBook", "Loan"))
+            {
+                <input type="submit" value="By Book" /><br />
+                <select name="book">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.Tome.Id>@loan.Id:@loan.Tome.Title </option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListLoansByLoanDate", "Loan"))
+            {
+                <input type="submit" value="By Loan Date" /><br />
+                <select name="loanDate">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.LoanDate>@loan.LoanDate</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListLoansByLoanDue", "Loan"))
+            {
+                <input type="submit" value="By Due Date" /><br />
+                <select name="loanDue">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.LoanDue>@loan.LoanDue</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListLoansByActive", "Loan"))
+            {
+                <input type="submit" value="By Active" /><br />
+                <select name="active">
+                    <option value="" selected></option>
+                    @foreach (var loan in Model)
+                    {
+                        <option value=@loan.Active>@loan.Active</option>
+                    }
+                </select>
+            }
+        </li>
+
+    </ul>
+</div>
+

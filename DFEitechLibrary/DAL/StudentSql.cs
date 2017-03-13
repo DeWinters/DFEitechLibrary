@@ -59,7 +59,8 @@ namespace DFEitechLibrary.DAL
                 {
                     con.Open();
                     cmd.CommandText = "DELETE FROM student WHERE student_id= @ID";
-                    cmd.Parameters.AddWithValue("@ID", id);
+                    cmd.Parameters.Add(new MySqlParameter("@ID", id));
+                    //cmd.Parameters.AddWithValue("@ID", id);
                     cmd.ExecuteNonQuery();
                 }
                 catch (MySqlException e)
@@ -164,7 +165,7 @@ namespace DFEitechLibrary.DAL
             {
                 try
                 {
-                    con.Close();
+                    con.Open();
                     cmd.CommandText = "SELECT * FROM student WHERE student_id=" + id;
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())

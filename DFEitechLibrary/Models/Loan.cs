@@ -10,8 +10,8 @@ namespace DFEitechLibrary.Models
         private static readonly log4net.ILog log = LogLink.GetLogger();
 
         public int Id { get; set; }
-        public int StudentId { get; set; }
-        public int BookId { get; set; }
+        public Student Pupil { get; set; }
+        public Book Tome { get; set; }
         public DateTime LoanDate { get; set; }
         public DateTime LoanDue { get; set; }
         public Boolean Active { get; set; }

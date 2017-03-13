@@ -1,23 +1,24 @@
 ﻿@model IEnumerable<DFEitechLibrary.Models.BookType>
 @{
     ViewBag.Title = "ListTypes";
-    <link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
     var wb = new WebGrid(source: Model, columnNames: new[] { "Id", "Name", "Duration", "Penalty" });
 }
 
-<div id="typeSlide">
-    <div>
-        <h2>ListBookTypes</h2>
-            @wb.GetHtml(columns: wb.Columns(
-            wb.Column(columnName: "Id", header: "ID#"),
-            wb.Column(columnName: "Name", header: "Name"),
-            wb.Column(columnName: "Duration", header: "Duration"),
-            wb.Column(columnName: "Penalty", header: "Penalty")
-            ))     
-    </div>    
-</div>
-<div>
+<div class="listBlock">
     @Html.Partial("_SearchTypes")
+    <br />
+    <br />
+</div>
+
+<div class="listBlock">
+    <div class="white">
+        @wb.GetHtml(columns: wb.Columns(
+         wb.Column(columnName: "Id", header: "ID#"),
+         wb.Column(columnName: "Name", header: "Name"),
+         wb.Column(columnName: "Duration", header: "Duration"),
+         wb.Column(columnName: "Penalty", header: "Penalty")
+         ))
+    </div>
 </div>
 
 <div>

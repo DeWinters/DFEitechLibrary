@@ -25,6 +25,7 @@ namespace DFEitechLibrary
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/dwstyles.css",
                       "~/Content/site.css"));
         }
     }

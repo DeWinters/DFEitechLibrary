@@ -1,7 +1,34 @@
 ﻿@model IEnumerable<DFEitechLibrary.Models.Loan>
 @{
     ViewBag.Title = "LoanList";
+    var wb = new WebGrid(source: Model, columnNames: new[] { "Id", "Student", "Tome", "Issued", "Due", "Active", "Accrued" });
 }
 
-<h2>LoanList</h2>
+<div class="listBlock">
+    @Html.Partial("_SearchLoans")
+    <br />
+    <br />
+</div>
 
+<div class="listBlock">
+    <div class="white">
+        @wb.GetHtml(columns: wb.Columns(
+            wb.Column(columnName: "Id", header: "Loan ID#"),
+            wb.Column(columnName: "Pupil.Id", header: "Student ID#"),
+            wb.Column(columnName: "Pupil.NameL", header: "Student Last"),
+            wb.Column(columnName: "Pupil.NameF", header: "Student First"),
+            wb.Column(columnName: "Tome.Id", header: "Book ID#"),
+            wb.Column(columnName: "Tome.Title", header: "Book Title"),
+            wb.Column(columnName: "Tome.AuthF", header: "Authour First"),
+            wb.Column(columnName: "Tome.AuthL", header: "Authour Last"),
+            wb.Column(columnName: "LoanDate", header: "Issued"),
+            wb.Column(columnName: "LoanDue", header: "Due"),
+            wb.Column(columnName: "Active", header: "Active"),
+            wb.Column(columnName: "Accrued", header: "Accrued")
+            ))
+    </div>
+</div>
+
+<div>
+    @Html.Partial("_LoanForm", new DFEitechLibrary.Models.Loan())
+</div>

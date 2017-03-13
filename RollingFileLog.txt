@@ -134,4 +134,1012 @@ ewLine20:51:47,566 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitech
 ewLine20:52:09,116 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_2_Get
 ewLine20:54:03,103 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
 ewLine20:54:13,429 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_4_Get
+ewLine21:18:21,789 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:20:09,285 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:22:37,562 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:23:09,505 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Special_Get
+ewLine21:23:09,648 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Get Types(name) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'Special' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByName(String name) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 194
+21:23:48,727 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_00:12:00_Get
+ewLine21:23:48,767 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Get BookType(duration) Butler Failure
+ewLineSystem.InvalidOperationException: Connection must be valid and open.
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 234
+   at DFEitechLibrary.DAL.MySqlButler.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 301
+21:28:09,849 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:28:45,826 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:28:54,384 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:29:10,426 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_00:12:00_Get
+ewLine21:29:10,447 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Get BookType(duration) Butler Failure
+ewLineSystem.InvalidOperationException: Connection must be valid and open.
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 234
+   at DFEitechLibrary.DAL.MySqlButler.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 301
+21:29:18,677 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_999.99_Get
+ewLine21:29:38,633 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:29:46,825 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_5_Get
+ewLine21:31:19,093 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:31:35,095 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_5_Get
+ewLine21:33:42,669 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_5_Get
+ewLine21:36:12,600 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:37:17,379 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_7.00:00:00_Get
+ewLine21:37:17,402 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Get BookType(duration) Butler Failure
+ewLineSystem.InvalidOperationException: Connection must be valid and open.
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 234
+   at DFEitechLibrary.DAL.MySqlButler.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 301
+21:37:42,490 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_00:12:00_Get
+ewLine21:37:42,527 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Get BookType(duration) Butler Failure
+ewLineSystem.InvalidOperationException: Connection must be valid and open.
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 234
+   at DFEitechLibrary.DAL.MySqlButler.GetTypeByDuration(TimeSpan duration) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 301
+21:37:50,652 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_999.99_Get
+ewLine21:37:55,600 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:38:04,597 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_5_Get
+ewLine21:38:35,122 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:38:44,424 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Original_Get
+ewLine21:38:44,517 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Get Types(name) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'Original' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.TypeSql.GetTypeByName(String name) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 194
+21:46:07,874 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:46:24,333 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine21:46:30,190 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:46:45,834 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_ClassText_Get
+ewLine21:46:49,895 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:46:55,206 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_Original_Get
+ewLine21:46:59,606 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine21:47:06,446 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_TestType2_Get
+ewLine22:00:15,805 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:01:04,458 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:02:00,051 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:03:36,964 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:07:08,677 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:08:30,826 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:10:52,259 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:11:19,350 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine22:12:13,176 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine22:13:03,988 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_4_Get
+ewLine22:47:12,148 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:32:38,927 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:32:55,721 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine23:33:08,860 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_3_Get
+ewLine23:34:15,754 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_TestType3_Inserted
+ewLine23:34:15,845 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] DEBUG - Type_TestType3_Insert
+ewLine23:34:15,847 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:34:36,442 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_5_Get
+ewLine23:47:19,530 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:48:00,727 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_ClassText_Get
+ewLine00:08:15,251 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:08:39,261 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_4_Get
+ewLine02:29:08,526 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine02:38:09,070 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns, Germs and Steel-Jared_Inserted
+ewLine02:38:09,371 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+02:43:43,076 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns, Germs and Steel-Jared_Inserted
+ewLine02:43:43,237 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+02:54:22,308 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns, Germs and Steel-Jared_Inserted
+ewLine02:54:22,519 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+03:02:17,020 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns, Germs and Steel-Jared_Inserted
+ewLine03:02:17,217 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+03:12:29,196 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:12:29,365 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:14:32,091 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:14:32,227 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:17:03,334 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:17:03,640 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:19:50,695 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:19:50,926 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:20:08,021 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine03:20:08,117 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 188
+03:38:19,543 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine03:38:22,995 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 188
+03:46:16,896 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine03:46:25,943 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:46:26,084 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:46:51,813 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine03:47:01,406 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:47:01,537 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:58:00,809 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine03:58:12,813 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine03:58:12,957 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(name, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByName(String title, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 228
+03:59:02,603 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine03:59:02,740 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(authL, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'Diamond' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByAuthL(String authL, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 308
+03:59:11,848 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book__Get
+ewLine03:59:31,196 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine03:59:31,329 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Get Book(authL, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'Diamond' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.GetBookByAuthL(String authL, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 308
+04:08:22,021 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine04:08:37,288 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine04:12:34,858 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine04:12:45,353 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine04:18:52,997 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine04:19:06,990 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine04:19:20,089 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine04:20:31,192 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine04:22:36,006 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_2_Get
+ewLine04:22:53,501 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Dune_Get
+ewLine04:23:05,657 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Herbert_Get
+ewLine04:24:43,161 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Chapterhouse-Frank_Inserted
+ewLine04:24:43,317 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+04:30:43,483 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Dune_Get
+ewLine04:32:11,236 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_2_Get
+ewLine04:32:20,812 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_2_Get
+ewLine04:32:28,926 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine04:32:38,057 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine04:32:46,226 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Dune_Get
+ewLine04:32:57,784 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Diamond_Get
+ewLine04:33:05,676 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Herbert_Get
+ewLine05:15:40,234 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_2_Get
+ewLine22:26:09,339 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine22:31:30,277 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:35:17,792 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:39:06,570 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:41:05,339 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:46:25,835 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:48:33,397 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:49:37,391 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+01:51:42,468 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+02:52:29,056 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine02:52:29,176 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+02:52:29,191 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+02:55:01,541 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine02:55:02,160 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+02:55:02,181 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+02:57:25,120 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine02:57:25,610 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+02:57:25,630 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+02:58:57,223 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine02:58:58,862 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+02:58:58,889 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+03:01:00,539 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine03:01:01,259 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+03:01:01,276 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+03:04:48,480 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine03:04:49,064 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+03:04:49,082 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+03:11:39,854 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine03:11:40,399 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+03:11:40,443 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+03:12:31,247 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine03:13:26,864 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-1_Inserted
+ewLine03:13:26,951 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+03:13:26,961 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+15:08:45,494 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine15:08:45,572 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Get Types(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.Net.Sockets.SocketException (0x80004005): The requested name is valid, but no data of the requested type was found
+   at System.Net.Dns.GetAddrInfo(String name)
+   at System.Net.Dns.InternalGetHostByName(String hostName, Boolean includeIPv6)
+   at System.Net.Dns.GetHostEntry(String hostNameOrAddress)
+   at MySql.Data.Common.MyNetworkStream.CreateStream(MySqlConnectionStringBuilder settings, Boolean unix)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at DFEitechLibrary.DAL.TypeSql.GetAllTypes() in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 312
+15:19:34,422 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Guns,_Get
+ewLine15:20:19,156 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_2_Get
+ewLine15:20:39,423 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1_Get
+ewLine16:35:15,904 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine16:36:16,511 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine16:36:17,334 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Student(id, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'student_id' in 'where clause'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 153
+16:36:17,368 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] ERROR - Insert Loan(studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure
+ewLineSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 32
+   at DFEitechLibrary.DAL.MySqlButler.InsertLoan(Int32 studentId, Int32 bookId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs:line 370
+16:50:59,554 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine16:51:06,487 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs] ERROR - Insert Loan Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'loan_penalty' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 45
+17:04:56,557 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:18:55,126 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine21:18:56,663 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs] ERROR - Insert Loan Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'loan_penalty' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.LoanSql.InsertLoan(Int32 studentId, Int32 bookId, StudentSql studentSql, BookSql bookSql, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\LoanSql.cs:line 45
+21:22:55,685 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_2-2_Inserted
+ewLine21:22:57,119 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Book(bookId, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@BOOKID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 152
+21:27:07,410 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_1-1_Inserted
+ewLine21:27:08,287 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Book(bookId, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@bookID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 152
+21:27:08,557 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Book(bookId, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@bookID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 152
+21:28:34,444 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Find Book(bookId, typeSql) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@BookID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.BookSql.FindBookById(Int32 bookId, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 152
+21:30:42,288 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:30:57,559 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:31:44,518 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_3-2_Inserted
+ewLine21:31:45,699 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:31:45,902 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:31:46,128 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:41:26,444 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:41:26,679 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:43:45,991 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:43:46,217 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:47:58,638 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:47:58,895 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:53:12,859 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+21:53:13,490 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:05:06,529 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:05:06,772 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:10:41,565 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:10:41,851 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:12:16,656 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:12:16,880 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:13:21,626 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:13:21,851 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:15:04,906 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:15:05,151 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:23:21,364 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:25:40,563 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:25:59,129 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:25:59,327 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:26:07,557 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:26:11,735 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:26:11,941 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:26:14,561 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:27:07,275 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:27:50,502 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:28:46,173 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:31:54,529 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:32:38,933 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:42:56,313 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:43:50,439 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:46:30,816 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:47:03,474 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:47:45,829 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:53:45,704 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:53:46,176 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:56:06,395 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:56:06,731 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:57:13,408 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:57:13,616 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:57:18,322 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:57:18,548 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:58:17,198 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+22:58:17,417 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:08:00,212 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:08:00,512 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:09:40,362 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:09:48,985 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:09:49,197 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:24:31,130 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:24:39,544 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:24:45,327 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:24:45,530 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:25:01,874 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_3_Find
+ewLine23:33:09,450 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:33:38,363 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:33:38,549 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:33:43,626 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:33:59,529 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:39:35,477 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:39:35,903 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:39:46,628 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:39:53,850 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:41:21,418 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:41:21,656 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:41:25,015 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:41:28,767 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine23:42:49,901 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:42:50,170 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:42:53,651 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:43:55,743 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:43:55,968 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+23:44:27,436 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:05:50,967 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:08:32,519 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+00:08:32,761 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+00:13:25,994 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:14:44,627 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
+ewLine00:14:50,281 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs] ERROR - Find Type(id) Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@TYPEID' has already been defined.
+   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   at DFEitechLibrary.DAL.TypeSql.FindTypeById(Int32 typeId) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\TypeSql.cs:line 119
+00:18:09,207 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Principia-Isaac_Inserted
+ewLine00:18:09,327 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs] ERROR - Insert Book Query Failure
+ewLineMySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'type' in 'field list'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DFEitechLibrary.DAL.BookSql.InsertBook(String title, String authF, String authL, BookType type, TypeSql typeSql) in C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\BookSql.cs:line 36
+00:24:03,629 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Principia-Isaac_Inserted
+ewLine00:29:57,741 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Origin of Species-Charles_Inserted
+ewLine00:30:45,742 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_1984-George_Inserted
+ewLine00:56:07,663 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Moby Dick-Herman_Inserted
+ewLine01:04:37,449 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Head First Java-Kathy_Inserted
+ewLine01:07:18,440 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Head First C#-Andrew_Inserted
+ewLine01:15:57,897 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Head First C#-Andrew_Inserted
+ewLine01:32:59,896 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Andrew_Get
 ewLine

@@ -1,0 +1,66 @@
+﻿
+@model IEnumerable<DFEitechLibrary.Models.Book>
+@{
+
+}
+
+<div class="listBlock">
+    Search Refinement
+    <ul class="nav navbar-nav">
+        <li>
+            @using (Html.BeginForm("ListBooksById", "Book"))
+            {
+                <input type="submit" value="By ID" /><br />
+                <select name="id">
+                    <option value="" selected></option>
+                    @foreach (var book in Model)
+                {
+                        <option value=@book.Id>@book.Id</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListBooksByTitle", "Book"))
+            {
+                <input type="submit" value="By Title" /><br />
+                <select name="title">
+                    <option value="" selected></option>
+                    @foreach (var book in Model)
+                    {
+                        <option value=@book.Title>@book.Title</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListBooksByAuthL", "Book"))
+            {
+                <input type="submit" value="By AuthL" /><br />
+                <select name="authL">
+                    <option value="" selected></option>
+                    @foreach (var book in Model)
+                    {
+                        <option value=@book.AuthL>@book.AuthL</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+        <li>
+            @using (Html.BeginForm("ListBooksByType", "Book"))
+            {
+                <input type="submit" value="By Type" /><br />
+                <select name="tometype">
+                    <option value="" selected></option>
+                    @foreach (var book in Model)
+                    {
+                        <option value=@book.TomeType>@book.TomeType.Id</option>
+                    }
+                </select>
+            }
+        </li>
+    </ul>
+    <br />
+
+</div>

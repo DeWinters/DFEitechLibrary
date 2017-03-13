@@ -4,17 +4,61 @@
 }
 
 <div>
-    <h3>Search Refiner</h3>
-    @using (Html.BeginForm("ListTypesById", "Type"))
-    {
-        <input type="submit" value="By ID" /><br />
-        <select name="id">
-            @foreach (var bookType in Model)
+    <h4>Search Refinement</h4>
+    <ul class="nav navbar-nav">
+        <li>
+            @using (Html.BeginForm("ListTypesById", "Type"))
             {
-                <option value=@bookType.Id>@bookType.Name</option>
-
+                <input type="submit" value="By ID" /><br />
+            <select name="id">
+                <option value="" selected></option>
+                @foreach (var bookType in Model)
+                {
+                <option value=@bookType.Id>@bookType.Id</option>
+                }
+            </select>
             }
-            <option value=2>2</option>
-        </select>
-    }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListTypesByName", "Type"))
+            {
+                <input type="submit" value="By Name" /><br />
+                <select name="name">
+                <option value="" selected></option>
+                    @foreach (var bookType in Model)
+                    {
+                        <option value=@bookType.Name>@bookType.Name</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListTypesByDuration", "Type"))
+            {
+                <input type="submit" value="By Duration" /><br />
+                <select name="duration">
+                    <option value="" selected></option>
+                    @foreach (var bookType in Model)
+                    {
+                        <option value=@bookType.Duration>@bookType.Duration</option>
+                    }
+                </select>
+            }
+        </li>
+        <li>
+            @using (Html.BeginForm("ListTypesByPenalty", "Type"))
+            {
+                <input type="submit" value="By Penalty" /><br />
+                <select name="penalty">
+                    <option value="" selected></option>
+                    @foreach (var bookType in Model)
+                    {
+                        <option value=@bookType.Penalty>@bookType.Penalty</option>
+                    }
+                </select>
+            }
+        </li>
+    </ul>
+    <br />
+    
 </div>

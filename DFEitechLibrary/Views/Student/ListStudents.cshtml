@@ -7,19 +7,15 @@
 }
 <link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
 
-<div id="studentSlide">
-    <div>
-        <h2>ListStudents</h2>
-        @wb.GetHtml(columns: wb.Columns(
+<div class="listBlock">
+    <h2>ListStudents</h2>
+    @wb.GetHtml(columns: wb.Columns(
         wb.Column(columnName: "Id", header: "ID#"),
         wb.Column(columnName: "NameL", header: "Last"),
         wb.Column(columnName: "NameF", header: "First")
-    ))
-    </div>
-
-    <div>
-        @Html.Partial("_StudentForm", new DFEitechLibrary.Models.Student())
-    </div>
+    ))    
 </div>
 
-
+<div>
+    @Html.Partial("_StudentForm", new DFEitechLibrary.Models.Student())
+</div>

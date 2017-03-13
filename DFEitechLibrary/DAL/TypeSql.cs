@@ -190,7 +190,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Open();
-                    cmd.CommandText = "SELECT * FROM booktype WHERE type_name=" + name;
+                    cmd.CommandText = "SELECT * FROM booktype WHERE type_name=@NAME";
+                    cmd.Parameters.AddWithValue("@NAME", name);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -230,7 +231,8 @@ namespace DFEitechLibrary.DAL
                 try
                 {
                     con.Close();
-                    cmd.CommandText = "SELECT * FROM booktype WHERE type_duration=" + duration;
+                    cmd.CommandText = "SELECT * FROM booktype WHERE type_duration=@DURATION";
+                    cmd.Parameters.AddWithValue("@DURATION", duration);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {

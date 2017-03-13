@@ -1,0 +1,55 @@
+﻿@model DFEitechLibrary.Models.Loan
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="listBlock">
+            <h4>Loan Creator</h4>
+            @using (Html.BeginForm("InsertLoan", "Loan"))
+            {
+                @Html.LabelFor(model => model.Id, "Student", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Id, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.Tome, "Book", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Tome, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+                <input type="submit" class="btn btn-primary" value="Create New Loan &raquo;" />
+            }
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="listBlock">
+            <h4>Load Loan</h4>
+             @using (Html.BeginForm("_LoanForm", "Loan"))
+            {
+                @Html.LabelFor(model => model.Id, "By ID#", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Id, new { @class = "control-label col-md-2", style = "width: 100px;" })<br /><br />
+                <input type="submit" class="btn btn-primary" value="Load Loan &raquo;" />
+            }
+        </div>
+        <div class="listBlock">
+            <h4>Edit Loan</h4>
+            @using (Html.BeginForm("_LoanForm", "Loan"))
+            {
+                @Html.LabelFor(model => model.Pupil, "New Pupil", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Pupil, new { @Value = @Model.Pupil, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.Tome, "New Book", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Tome, new { @Value = @Model.Tome, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.LoanDate, "New Date", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.LoanDate, new { @Value = @Model.LoanDate, @class = "control-label col-md-2", style = "width: 100px;" })<br /><br />
+                <input type="submit" class="btn btn-warning" value="Edit Loan &raquo;" />
+            }
+        </div>
+    </div>
+
+    <div class="col-md-3 listBlock">
+        <h4>Return Loan</h4>
+        @using (Html.BeginForm("_LoanForm", "Loan"))
+        {
+            @Html.LabelFor(model => model.Id, "Loan ID", htmlAttributes: new { @class = "control-label col-md-5"})
+            @Html.TextBoxFor(model => model.Id, new { @Value = Model.Id, @class = "control-label col-md-2", style = "width: 100px;"})<br /><br />
+            <input type="submit" class="btn btn-primary" value="Return &raquo;" />
+        }
+    </div>
+</div>

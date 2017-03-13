@@ -1,7 +1,28 @@
 ﻿@model IEnumerable<DFEitechLibrary.Models.Book>
 @{
     ViewBag.Title = "ListBooks";
+
+    var wb = new WebGrid(source: Model, columnNames: new[] { "Id", "Title", "AuthL", "AuthF", "Type" });
 }
 
-<h2>ListBooks</h2>
+<div class="listBlock">
+    @Html.Partial("_SearchBooks")
+    <br /><br />
+</div>
+    
+    
+<div class="listBlock">
+    <div class="white">
+        @wb.GetHtml(columns: wb.Columns(
+            wb.Column(columnName: "Id", header: "ID#"),
+            wb.Column(columnName: "Title", header: "Title"),
+            wb.Column(columnName: "AuthL", header: "AuthL"),
+            wb.Column(columnName: "AuthF", header: "AuthF"),
+            wb.Column(columnName: "TomeType.Name", header: "Type")
+            ))
+    </div>
+</div>
 
+<div>
+    @Html.Partial("_BookForm", new DFEitechLibrary.Models.Book())
+</div>

@@ -1,0 +1,14 @@
+﻿body {
+    background-color: purple;
+}
+
+.listBlock{
+    border: solid black 1px;
+    background-color: gray;
+    padding: 5px;
+    margin: 5px;
+}
+
+.white{
+    background-color: white;
+}

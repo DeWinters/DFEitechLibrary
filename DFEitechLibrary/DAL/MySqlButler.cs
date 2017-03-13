@@ -110,12 +110,13 @@ namespace DFEitechLibrary.DAL
         }
 
         /************************************************************ Book Passers *****/
-        public Book InsertBook(string title, string authF, string authL, BookType type, TypeSql typeSql)
+        public Book InsertBook(string title, string authF, string authL, int type)
         {
             try
             {
+                BookType bookType = typeSql.FindTypeById(type);
                 log.Debug("Book_" + title + "-" + authL + "_Inserted");
-                return bookSql.InsertBook(title, authF, authL, type, typeSql);
+                return bookSql.InsertBook(title, authF, authL, bookType, typeSql);
             }
             catch(Exception e)
             {
@@ -152,7 +153,7 @@ namespace DFEitechLibrary.DAL
             }
         }
 
-        public List<Book> GetBookById(int id, TypeSql typeSql)
+        public List<Book> GetBookById(int id)
         {
             try
             {
@@ -166,7 +167,7 @@ namespace DFEitechLibrary.DAL
             }
         }
 
-        public List<Book> GetBookByName(string title, TypeSql typeSql)
+        public List<Book> GetBookByName(string title)
         {
             try
             {
@@ -194,7 +195,7 @@ namespace DFEitechLibrary.DAL
             }
         }
 
-        public List<Book> GetBookAuthL(string authL, TypeSql typeSql)
+        public List<Book> GetBookByAuthL(string authL)
         {
             try
             {
@@ -206,6 +207,16 @@ namespace DFEitechLibrary.DAL
                 log.Error("Get Book(authL,typeSql) Butler Failure", e);
                 return bookSql.FailedBookList();
             }
+        }
+
+        public List<Book> GetBooksByType(BookType type)
+        {
+            return bookSql.GetBooksByType(type, typeSql);
+        }
+
+        public List<Book> GetAllBooks()
+        {
+            return bookSql.GetAllBooks(typeSql);
         }
 
         /************************************************************ Type Passers *****/
@@ -352,12 +363,12 @@ namespace DFEitechLibrary.DAL
         }
 
         /************************************************************ Loan Passers *****/
-        public Loan InsertLoan(int studentId, int bookId, DateTime loanDate, DateTime loanDue, Boolean active, Decimal accrued)
+        public Loan InsertLoan(int studentId, int bookId)
         {
             try
             {
                 log.Debug("Loan_" + studentId + "-" + bookId + "_Inserted");
-                return loanSql.InsertLoan(studentId, bookId, loanDate, loanDue, active, accrued);
+                return loanSql.InsertLoan(studentId, bookId, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -371,7 +382,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + loanId + "_Deleted");
-                return loanSql.DeleteLoan(loanId);
+                return loanSql.DeleteLoan(loanId, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -385,11 +396,25 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + loanId + "-" + studentId + "-" + bookId);
-                return loanSql.UpdateLoan(loanId, studentId, bookId, loanDate, loanDue, active, accrued);
+                return loanSql.UpdateLoan(loanId, studentId, bookId, loanDate, loanDue, active, accrued, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
                 log.Error("Update Loan(loanId,studentId,bookId,loanDate,loanDue,active,accrued) Butler Failure", e);
+                return loanSql.FailedLoanQuery();
+            }
+        }
+
+        public Loan FindLoanById(int loanId)
+        {
+            try
+            {
+                log.Debug("Loan_" + loanId + "_Find");
+                return loanSql.FindLoanById(loanId, studentSql, bookSql, typeSql);
+            }
+            catch(Exception e)
+            {
+                log.Error("Find Loans(id) Butler Failure", e);
                 return loanSql.FailedLoanQuery();
             }
         }
@@ -399,7 +424,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + loanId + "_Get");
-                return loanSql.GetLoansById(loanId);
+                return loanSql.GetLoansById(loanId, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -413,7 +438,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + studentId + "_Get");
-                return loanSql.GetLoansByStudent(studentId);
+                return loanSql.GetLoansByStudent(studentId, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -427,7 +452,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + bookId + "_Get");
-                return loanSql.GetLoanByBookId(bookId);
+                return loanSql.GetLoanByBookId(bookId, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -441,7 +466,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + loanDate + "_Get");
-                return loanSql.GetLoanByDate(loanDate);
+                return loanSql.GetLoanByDate(loanDate, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -455,7 +480,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + loanDue + "_Get");
-                return loanSql.GetLoanByDue(loanDue);
+                return loanSql.GetLoanByDue(loanDue, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -469,7 +494,7 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + active + "_Get");
-                return loanSql.GetLoanByActive(active);
+                return loanSql.GetLoanByActive(active, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
@@ -483,13 +508,19 @@ namespace DFEitechLibrary.DAL
             try
             {
                 log.Debug("Loan_" + accrued + "_Get");
-                return loanSql.GetLoanByAccrued(accrued);
+                return loanSql.GetLoanByAccrued(accrued, studentSql, bookSql, typeSql);
             }
             catch(Exception e)
             {
                 log.Error("Get Loans(accrued) Butler Failure", e);
                 return loanSql.FailedLoanList();
             }
+        }
+
+        public List<Loan> GetAllLoans()
+        {
+
+            return loanSql.GetAllLoans(studentSql, bookSql, typeSql);
         }
     }
 }

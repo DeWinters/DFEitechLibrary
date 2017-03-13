@@ -12,30 +12,33 @@ namespace DFEitechLibrary.Controllers
         private static readonly log4net.ILog log = LogLink.GetLogger();
         MySqlButler butler = new MySqlButler();
 
-        [HttpGet]
         public ActionResult ListTypes()
         {
             return View(butler.GetAllTypes());
         }
+
         [ActionName("ListTypesById")]
         public ActionResult ListTypes(int id)
         {
             return View("ListTypes", butler.GetTypeById(id));
         }
-        [ActionName("TypesByName")]
+
+        [ActionName("ListTypesByName")]
         public ActionResult ListTypes(string name)
         {
-            return View(butler.GetTypeByName(name));
+            return View("ListTypes", butler.GetTypeByName(name));
         }
-        [ActionName("TypesByDuration")]
+
+        [ActionName("ListTypesByDuration")]
         public ActionResult ListTypes(TimeSpan duration)
         {
-            return View(butler.GetTypeByDuration(duration));
+            return View("ListTypes", butler.GetTypeByDuration(duration));
         }
-        [ActionName("TypesByPenalty")]
+
+        [ActionName("ListTypesByPenalty")]
         public ActionResult ListTypes(Decimal penalty)
         {
-            return View(butler.GetTypeByPenalty(penalty));
+            return View("ListTypes", butler.GetTypeByPenalty(penalty));
         }
 
         [HttpPost]
@@ -43,36 +46,25 @@ namespace DFEitechLibrary.Controllers
         public ActionResult ListTypes(string name, TimeSpan duration, Decimal penalty)
         {
             butler.InsertBookType(name, duration, penalty);
-            return View(butler.GetAllTypes());
+            return View("ListTypes", butler.GetAllTypes());
         }
 
-
-        public ActionResult RefinedTypes(int id, string name, TimeSpan duration, Decimal penalty)
+        public ActionResult LoadType(int id)
         {
-            if (id != 0 && name == null && duration == null && penalty == 0)
-            {
-                return View(butler.GetTypeById(id));
-            }
-            else if (id == 0 && name != null && duration==null && penalty == 0)
-            {
-                return View(butler.GetTypeByName(name));
-            }
-            else if (id == 0 && name == null && duration != null && penalty == 0)
-            {
-                return View(butler.GetTypeByDuration(duration));
-            }
-            else if (id == 0 && name == null && duration == null && penalty != 0)
-            {
-                return View(butler.GetTypeByPenalty(penalty));
-            }
-            else
-            {
-                return View(butler.GetAllTypes());
-            }
+            return View("RefinedTypes", id);
         }
 
+        
+        public ActionResult DeleteTypes(int id)
+        {
+            return View("ListTypes", butler.DeleteBookType(id));
+        }
 
-
+        //[ActionName("RefinedTypesById")]
+        public ActionResult RefinedTypes(int id)
+        {
+            return View(butler.FindTypeById(id));  
+        }
 
         public ActionResult _TypeForm(int id)
         {

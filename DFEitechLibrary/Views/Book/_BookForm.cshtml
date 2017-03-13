@@ -1,0 +1,87 @@
+﻿@model DFEitechLibrary.Models.Book
+@{
+    ViewBag.Title = "_BookForm";
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="listBlock">
+            <h4>Book Creator</h4>
+            @using (Html.BeginForm("InsertBook", "Book"))
+            {
+                @Html.LabelFor(model => model.Title, "Book Title", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Title, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthL, "Author Last", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthL, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthF, "Author First", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthF, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.TomeType.Id, "Book Type", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBox("typeId", null, new { @Value = "", @class = "control-label col-md-2", style = "width: 100px;" })<br />
+                <input type="submit" class="btn btn-primary" value="Create New Book &raquo;" />
+            }
+        </div>        
+    </div>
+
+    <div class="col-md-4">
+        <div class="listBlock">
+            <h4>Load Book</h4>
+            @using (Html.BeginForm("_BookForm", "Book"))
+            {
+                @Html.LabelFor(model => model.Id, "By ID#", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Id, new { @class = "control-label col-md-2", style = "width: 100px;" })<br />
+                <input type="submit" class="btn btn-primary" value="Load Book &raquo;" />
+            }
+        </div>
+        
+        <div class="listBlock">
+            <h4>Edit Book</h4>
+            @using (Html.BeginForm("_BookForm", "Book"))
+            {
+                @Html.LabelFor(model => model.Title, "Edit Title", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Title, new { @Value = @Model.Title, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthL, "Edit AuthL", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthL, new { @Value = @Model.AuthL, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthF, "Edit AuthF", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthF, new { @Value = @Model.AuthF, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.TomeType, "Edit Type", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.TomeType, new { @Value = @Model.TomeType, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+                <input type="submit" class="btn btn-warning" value="Edit Book &raquo;" />
+            }
+        </div>        
+    </div>
+
+    
+    <div class="col-md-4">
+        <div class="listBlock">
+            <h4>Delete Book</h4>
+            @using (Html.BeginForm("_BookForm", "Book"))
+            {
+                @Html.LabelFor(model => model.Id, "By ID#", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Id, new { @Value = 0, style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.Title, "Book Title", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.Title, new { @Value = @Model.Title, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthL, "AuthL", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthL, new { @Value = Model.AuthL, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.AuthF, "AuthF", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.AuthF, new { @Value = Model.AuthF, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+
+                @Html.LabelFor(model => model.TomeType, "Book type", htmlAttributes: new { @class = "control-label col-md-5" })
+                @Html.TextBoxFor(model => model.TomeType, new { @Value = Model.TomeType, @class = "control-label col-md-2", style = "width: 100px;" })<br />
+                <input type="submit" class="btn btn-danger" value="Delete Book &raquo;" />
+            }
+        </div>       
+    </div>
+</div>
+
+
+
