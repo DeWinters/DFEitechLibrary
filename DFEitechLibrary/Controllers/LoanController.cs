@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using DFEitechLibrary.DAL;
 
@@ -29,7 +26,7 @@ namespace DFEitechLibrary.Controllers
         {
             return View("ListLoans", butler.GetLoanById(Id));
         }
-        [ActionName("ListLoansByStudentId")]
+        [ActionName("ListLoansByActive")]
         public ActionResult ListLoans(Boolean active)
         {
             return View("ListLoans", butler.GetLoanByActive(active));

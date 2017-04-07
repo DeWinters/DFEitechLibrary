@@ -773,4 +773,9 @@ ewLine01:04:37,449 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitech
 ewLine01:07:18,440 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Head First C#-Andrew_Inserted
 ewLine01:15:57,897 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Head First C#-Andrew_Inserted
 ewLine01:32:59,896 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_Andrew_Get
+ewLine02:01:32,672 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_All_Get
+ewLine02:02:53,647 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_All_Get
+ewLine04:32:05,784 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Book_All_Get
+ewLine02:25:14,679 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - Loan_All_Get
+ewLine00:33:54,669 [C:\Users\Administrator\Source\Repos\DFEitechLibrary\DFEitechLibrary\DAL\MySqlButler.cs] DEBUG - BookType_All_Get
 ewLine

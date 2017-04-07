@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using DFEitechLibrary.Models;
 
 namespace DFEitechLibrary.DAL
@@ -211,12 +209,33 @@ namespace DFEitechLibrary.DAL
 
         public List<Book> GetBooksByType(BookType type)
         {
-            return bookSql.GetBooksByType(type, typeSql);
+            try
+            {
+                log.Debug("Book_" + type + "_Get");
+                return bookSql.GetBooksByType(type, typeSql);
+            }
+            catch(Exception e)
+            {
+                log.Error("Get Book(type) Butler Failure", e);
+                return bookSql.FailedBookList();
+            }
+            
         }
 
         public List<Book> GetAllBooks()
         {
-            return bookSql.GetAllBooks(typeSql);
+            try
+            {
+                log.Debug("Book_All_Get");
+                return bookSql.GetAllBooks(typeSql);
+            }
+            catch(Exception e)
+            {
+                log.Error("Get All Books", e);
+                return bookSql.FailedBookList();
+
+            }
+            
         }
 
         /************************************************************ Type Passers *****/
@@ -355,7 +374,7 @@ namespace DFEitechLibrary.DAL
             }
             catch(Exception e)
             {
-                log.Error("Get BookTypes_fail_Get");
+                log.Error("Get BookTypes_fail_Get", e);
                 BookType blankBook = new BookType() { Id = 999, Name = "Blank Slot" };
                 return blankBook;
             }
@@ -519,8 +538,19 @@ namespace DFEitechLibrary.DAL
 
         public List<Loan> GetAllLoans()
         {
+            try
+            {
+                log.Debug("Loan_All_Get");
+                return loanSql.GetAllLoans(studentSql, bookSql, typeSql);
+            }
+            catch(Exception e)
+            {
+                log.Error("Get Loan(*) Butler Failure", e);
+                return loanSql.FailedLoanList();
 
-            return loanSql.GetAllLoans(studentSql, bookSql, typeSql);
+            }
+
+            
         }
     }
 }

@@ -338,7 +338,7 @@ namespace DFEitechLibrary.DAL
 
         public BookType FailedTypeQuery()
         {
-            TimeSpan duration = new TimeSpan(9999, 11, 11);
+            TimeSpan duration = new TimeSpan(300, 11, 11);
             BookType failure = new BookType() { Id = 999, Name = "Handling Error", Duration=duration, Penalty = 999.99m };
             return failure;
         }
@@ -346,7 +346,7 @@ namespace DFEitechLibrary.DAL
         public List<BookType> FailedTypeList()
         {
             List<BookType> failures = new List<BookType>();
-            TimeSpan duration = new TimeSpan(9999, 11, 11);
+            TimeSpan duration = new TimeSpan(300, 11, 11);
             BookType failure = new BookType() { Id = 999, Name = "Handling Error", Duration = duration, Penalty = 999.99m };
             failures.Add(failure);
             return failures;

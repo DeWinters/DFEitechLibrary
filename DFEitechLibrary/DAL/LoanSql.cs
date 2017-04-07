@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using DFEitechLibrary.Models;
 using MySql.Data.MySqlClient;
 
@@ -167,6 +165,11 @@ namespace DFEitechLibrary.DAL
                         loan.LoanDue = rdr.GetDateTime(4);
                         loan.Active = rdr.GetBoolean(5);
                         loan.Accrued = rdr.GetDecimal(6);
+                        if(loan.Active == true)
+                        {
+                            TimeSpan late = DateTime.Now - loan.LoanDue;
+                            loan.Accrued = late.Days * loan.Tome.TomeType.Penalty;
+                        }
                         matchedLoans.Add(loan);
                     }
                 }
@@ -403,6 +406,11 @@ namespace DFEitechLibrary.DAL
                 loan.LoanDue = rdr.GetDateTime(4);
                 loan.Active = rdr.GetBoolean(5);
                 loan.Accrued = rdr.GetDecimal(6);
+                if (loan.Active == true)
+                {
+                    TimeSpan late = DateTime.Now - loan.LoanDue;
+                    loan.Accrued = late.Days * loan.Tome.TomeType.Penalty;
+                }
                 matchedLoans.Add(loan);
             }
             return matchedLoans;
@@ -419,8 +427,8 @@ namespace DFEitechLibrary.DAL
         public List<Loan> FailedLoanList()
         {
             List<Loan> failures = new List<Loan>();
-            DateTime loanDate = new DateTime(1, 1, 2001);
-            DateTime loanDue = new DateTime(2, 1, 2001);
+            DateTime loanDate = new DateTime(2001, 1, 1);
+            DateTime loanDue = new DateTime(2001, 1, 2);
             Loan failure = new Loan() { Id = 999, Pupil = null, Tome = null, Accrued = 999.99m, LoanDate = loanDate, LoanDue = loanDue, Active = false };
             failures.Add(failure);
             return failures;

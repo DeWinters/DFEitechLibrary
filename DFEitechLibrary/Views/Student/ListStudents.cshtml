@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<DFEitechLibrary.Models.Student>
 @{
-    ViewBag.Title = "ListStudents";
-
-    
+    ViewBag.Title = "ListStudents";    
     var wb = new WebGrid(source: Model, columnNames: new[] { "Id", "NameL", "NameF" });
 }
 <link rel="stylesheet" type="text/css" href="~/Content/Site.css/?ts=<?=time()?>" &quot; />
